@@ -4,7 +4,7 @@ namespace AssetManagement.Common
 {
     public class AssetManagementContext : DbContext
     {
-        public AssetManagementContext() : base("name=AssetManagementContext")
+        public AssetManagementContext() : base("name=AssetManagement")
         {
         }
 
