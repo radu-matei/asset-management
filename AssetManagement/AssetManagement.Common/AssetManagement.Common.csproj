@@ -52,6 +52,7 @@
     <Compile Include="Asset.cs" />
     <Compile Include="AssetManagementContext.cs" />
     <Compile Include="AssetType.cs" />
+    <Compile Include="BlobInformation.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Status.cs" />
