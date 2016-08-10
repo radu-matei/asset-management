@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AssetManagement.Common.Asset>
+
+@{
+    ViewBag.Title = "Assets";
+}
+
+<h2>@ViewBag.AssetTypeName Assets</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Assets", null, null)
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Assets", new { id=item.Id }, null) |
+            @Html.ActionLink("Details", "Index", "Logs",  new { id=item.Id }, null) |
+            @Html.ActionLink("Delete", "Delete", "Assets", new { id=item.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>
